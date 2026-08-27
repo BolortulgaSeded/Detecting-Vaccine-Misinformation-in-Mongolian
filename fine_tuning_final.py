@@ -84,7 +84,7 @@ def score(model, test_df):
     print("  misinfo recall: %.4f | reliable recall: %.4f" % (r[1], r[0]))
     print("  confusion:", confusion_matrix(gold, preds, labels=[0, 1]).tolist())
     return macro
-
+#RQ1
 en_train, en_test = train_test_split(english, test_size=0.20, stratify=english["label"], random_state=42)
 mn_pool, mn_test = train_test_split(mongolian, train_size=100, stratify=mongolian["label"], random_state=42)
 print("EN train/test:", len(en_train), len(en_test), " MN pool/test:", len(mn_pool), len(mn_test))
@@ -99,6 +99,7 @@ zero_shot = score(en_model, mn_test)
 
 en_model.save_pretrained("en_model")
 
+# rQ23
 import gc
 
 seeds = [42, 123, 2024]
@@ -127,6 +128,7 @@ print("English ceiling: %.4f" % ceiling)
 for n, (mean, std) in sweep.items():
     print("MN %3d -> %.4f ± %.4f" % (n, mean, std))
 
+#RQ4
 import gc
 
 constraint = english[english["source"].str.lower() == "constraint"]
