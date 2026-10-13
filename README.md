@@ -2,7 +2,6 @@
 
 Can an English-trained multilingual model (XLM-RoBERTa) detect Mongolian vaccine misinformation?
 
-MSc dissertation project, Northumbria University London, 2026. Includes the first labelled dataset of Mongolian vaccine-related claims.
 
 ## What this does
 
